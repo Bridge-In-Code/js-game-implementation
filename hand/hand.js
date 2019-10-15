@@ -32,6 +32,10 @@ class Hand {
     this.partner = null
   }
   //sort takes in your cards and whatever cards are unsorted
+  connect(left, across){
+    this.next = left;
+    this.partner = across; 
+  }
   sort(){
     // look at unsorted cards, and if there are any insert the number into the correct suite
     for (let i = 0; i < this.unsortedCards.length; i++){
